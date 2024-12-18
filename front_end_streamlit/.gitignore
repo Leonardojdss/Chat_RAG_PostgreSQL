@@ -1,0 +1,4 @@
+*\.env
+*\.pyc
+*\app\.pyc
+*\teste_api.py

@@ -1,0 +1,9 @@
+psycopg2==2.9.10
+pgvector==0.3.6
+PyPDF2==3.0.1
+python-dotenv==1.0.1
+langchain_openai==0.2.12
+langchain_text_splitters==0.3.2
+uvicorn==0.34.0
+fastapi==0.115.6
+python-multipart==0.0.19
