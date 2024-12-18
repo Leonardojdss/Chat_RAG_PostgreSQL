@@ -8,6 +8,7 @@ from repositories.connection_openai import connection_openai_Embeddings
 from repositories.connection_postgreSQL import connection_postgreSQL
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 import json
+import random
 
 load_dotenv()
 
@@ -69,7 +70,7 @@ def indexar_arquivos(arquivo):
     for text in overlapping_texts:
         conteudo_embedding = embedd_documentos(text)
         documentos.append({
-            "id": datetime.now().strftime("%d%m%Y%H%M%S"),
+            "id": random.randint(1, 100000),
             "titulo_do_arquivo": titulo,
             "conteudo_vetorizado": json.dumps(conteudo_embedding),
             "metadado": text
