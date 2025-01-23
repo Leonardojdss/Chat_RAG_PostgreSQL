@@ -22,7 +22,8 @@ def client_openai(messages, contexto):
 
 def get_contexto_tech_enabler(fala_usuario):
     body = {"text": f"{fala_usuario}"}
-    request = requests.post("https://ms-embedding-documents-tech-enabler.azurewebsites.net/ms_embedding/search_similarity", json=body)
+    # Substitua a URL da requisição pela URL do seu serviço de embedding que subiu na nuvem ou deixe local caso esteja rodando localmente
+    request = requests.post("https://localhost:8000/ms_embedding/search_similarity", json=body)
     contexto = request.json()
     return contexto
 

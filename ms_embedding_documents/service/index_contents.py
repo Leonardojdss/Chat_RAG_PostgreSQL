@@ -85,7 +85,7 @@ def indexar_arquivos(arquivo):
     for documento in documentos:
         try:
             cur.execute(
-                f"INSERT INTO hands_on_tech_enabler (id, titulo, conteudo_vetorizado, metadado) VALUES ('{documento['id']}', '{documento['titulo_do_arquivo']}', '{documento['conteudo_vetorizado']}', '{documento['metadado']}')"
+                f"INSERT INTO nome_da_tabela_no_postgresql (id, titulo, conteudo_vetorizada, metadado) VALUES ('{documento['id']}', '{documento['titulo_do_arquivo']}', '{documento['conteudo_vetorizado']}', '{documento['metadado']}')"
             )
             conn.commit()
         except Exception as e:

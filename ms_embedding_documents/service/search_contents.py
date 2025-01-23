@@ -26,10 +26,10 @@ def pesquisar_conteudo_indexado(pergunta):
     conn, cur = connection_postgreSQL(USER_POSTGRESQL, PASSWORD_POSTGRESQL, ENDPOINT_POSTGRESQL)
 
     try:
-        cur.execute("SELECT conteudo_vetorizado <=> %s AS distance, metadado \
-                    FROM hands_on_tech_enabler \
+        cur.execute("SELECT conteudo_vetorizada <=> %s AS distance, metadado \
+                    FROM nome_da_tabela_no_postgresql \
                     ORDER BY distance ASC \
-                    LIMIT 10", (pergunta_vetorizada_ajustada,))
+                    LIMIT 30", (pergunta_vetorizada_ajustada,))
         results = cur.fetchall()
         conn.commit()
         return results
